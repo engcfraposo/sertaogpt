@@ -23,7 +23,7 @@ function sendMessage() {
         method: 'POST',
         headers: {
             'Content-Type':'application/json',
-            'Authorization': 'Bearer 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'
+            'Authorization': 'Bearer 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'
         },
         body: JSON.stringify({
             "model": "gpt-3.5-turbo",
