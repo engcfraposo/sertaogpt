@@ -1,4 +1,10 @@
 let chatHistory = [];
+let config;
+
+fetch('config.json')
+    .then(response => response.json())
+    .then(data => config = data)
+    .then(main);
 
 function sendMessage() {
     let messageInput = document.getElementById('messageInput');
@@ -23,7 +29,7 @@ function sendMessage() {
         method: 'POST',
         headers: {
             'Content-Type':'application/json',
-            'Authorization': 'Bearer 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'
+            'Authorization': `Bearer config["OPENAI_API_KEY"]`
         },
         body: JSON.stringify({
             "model": "gpt-3.5-turbo",

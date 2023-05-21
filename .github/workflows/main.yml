@@ -10,6 +10,11 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
+    - name: Create configuration file
+      run: |
+        echo '{
+          "OPENAI_API_KEY": "${{ secrets.OPENAI_API_KEY }}"
+        }' > config.json
     - name: Set up Azure CLI
       uses: azure/CLI@v1
       with:
