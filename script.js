@@ -6,7 +6,7 @@ function sendMessage() {
     fetch('config.json')
         .then(response => response.json())
         .then(data => config = data)
-        
+
     let messageInput = document.getElementById('messageInput');
     let message = messageInput.value;
 
@@ -29,7 +29,7 @@ function sendMessage() {
         method: 'POST',
         headers: {
             'Content-Type':'application/json',
-            'Authorization': `Bearer config["OPENAI_API_KEY"]`
+            'Authorization': `Bearer ${config["OPENAI_API_KEY"]}`
         },
         body: JSON.stringify({
             "model": "gpt-3.5-turbo",
