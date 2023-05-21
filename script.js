@@ -1,11 +1,12 @@
 let chatHistory = [];
-
-
-function sendMessage() {
-    let config;
-    fetch('config.json')
+let config;
+fetch('config.json')
         .then(response => response.json())
         .then(data => config = data)
+
+function sendMessage() {
+    console.log(config)
+    
 
     let messageInput = document.getElementById('messageInput');
     let message = messageInput.value;
