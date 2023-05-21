@@ -5,9 +5,6 @@ fetch('config.json')
         .then(data => config = data)
 
 function sendMessage() {
-    console.log(config)
-    
-
     let messageInput = document.getElementById('messageInput');
     let message = messageInput.value;
 
