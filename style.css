@@ -52,7 +52,7 @@ body {
     align-items: center;
 }
 
-.message img {
+.message img.avatar {
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -72,10 +72,19 @@ body {
     justify-content: right;
 }
 
-.user-message img {
+.user-message img.avatar {
     float: right;
     margin-right: 0;
     margin-left: 15px;
+}
+
+.message img.dalle {
+    width: 256px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 5px;
+    border: 4px solid white;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .user-message span {
